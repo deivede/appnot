@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    function update_ntws() {
+
+        visor = document.getElementById("updt");
+
+        fetch('', {
+            method: "POST",
+            credentials: "include",
+            body: JSON.stringify(visor),
+            cache: "no-cache",
+            headers: new Headers({
+                "content-type": "applicaton/json"
+            })
+        }).then(response => {
+            if (response.ok) {
+                response.json().then(data => {
+            novotweet = data.nwtt;
+            console.log(novotweet);
+            visor.innerHTML = novotweet;
+        })
+            } else {
+                console.log("fodase.")
+            }
+        });
+
+
+    }
+</script>
+</head>
+<body>
+<h1 id="updt">{{ntw}}</h1>
+<button onclick="update_ntws()">atualizar</button>
+</body>
+</html>
