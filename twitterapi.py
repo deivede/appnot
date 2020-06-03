@@ -1,4 +1,5 @@
 import tweepy
+from twkeys import *
 
 def taketts():
 
@@ -6,9 +7,8 @@ def taketts():
     put = lasttw.read()
     lasttw.close()
 
-    auth = tweepy.OAuthHandler("7TPANllmOdForjljyewaYkLpt", "am0DqUHc75sxTwKND1uqsABLNtMDzZ7LAb1gLQW8vJJtOJMFLq")
-    auth.set_access_token("53538435-wbsRePsZhHyGDTf4PXxo5xHkr8gB2bePtzu18xmD7",
-                          "A2huzhminJJxd2tky3VBsZFM1F8MlgSi1WomiTWJ9yewI")
+    auth = tweepy.OAuthHandler(oauthkey, oauthskey)
+    auth.set_access_token(tokkey, tokskey)
 
     api = tweepy.API(auth)
 
@@ -33,6 +33,3 @@ def taketts():
     newt.close();
 
     return strnt
-
-
-
