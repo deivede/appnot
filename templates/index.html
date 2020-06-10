@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script>
-    function update_ntws() {
+    <script>function update_ntws() {
 
         const visor = document.getElementById("updt");
 
 
         const data = (response) => {
-            {
-                if (response.ok) {
-                    response.json().then( dt => {
+
+            if (response.ok) {
+                response.json().then(dt => {
                     novotweet = dt.nwtt;
                     console.log(novotweet);
                     visor.innerHTML = novotweet;
                 })
-                } else {
-                    console.log(error);
-                }
+            } else {
+                console.log(error);
             }
         }
+
 
         const rendertt = async () => {
             let reqtt = await fetch('', {
@@ -37,12 +36,64 @@
         }
 
         rendertt();
-    }
+    }</script>
+    <style>
+        .box {
+ height: 150px;
+ width: 150px;
+ display: block;
+ margin: 0 auto;
+ background-color: lightyellow;
+}
 
-</script>
+
+
+.dot2 {
+  height: 35px;
+  width: 35px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot3 {
+  height: 35px;
+  width: 35px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  bottom: 100px;
+  left: 60px;
+  border: 1px solid white;
+}
+
+.not{
+  text-align: center;
+  color: white;
+  position: relative;
+  top: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: sans-serif;
+}
+
+.clip {
+   clip-path: circle(50%);
+   height: 100px;
+   weigth: 100px;
+  position: relative;
+  top: 20px;
+  left: 25px;
+
+}
+    </style>
 </head>
 <body>
-<h1 id="updt">{{ntw}}</h1>
-<button onclick="update_ntws()">atualizar</button>
+   <div class="box">
+     <div><img src="https://pbs.twimg.com/profile_images/909549046020308992/iUwzkyXZ_400x400.jpg" class="clip"></div>
+     <button class="dot2" onclick="update_ntws()"></button>
+     <div class="dot3"><div class="not" id="updt">{{ntw}}</div></div>
+  </div>
 </body>
 </html>
