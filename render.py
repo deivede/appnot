@@ -10,13 +10,15 @@ def index():
 @app.route("/", methods=["POST"])
 def button():
 
-    retw = taketts()
-
-    req = request.get_json()
+    req = request.data
 
     print(req)
 
-    res = make_response(jsonify({"nwtt": retw}), 200)
+    usr_res = req.decode("utf-8")
+
+    retw = taketts(usr_res)
+
+    res = make_response(jsonify({"nwtt": retw["ntw"]}), 200)
 
     return res
 

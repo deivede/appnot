@@ -1,9 +1,25 @@
 import tweepy
 from twkeys import *
 
-def taketts():
+def taketts(usr):
 
-    lasttw = open("lasttw.txt", "r")
+    def takeusr(slct_usr):
+
+        usrdb = {
+           "playactionfa": "3344165463",
+            "deivede73": "53538435"
+        }
+
+        usuario = slct_usr
+        return usrdb[usuario]
+
+    idusr = takeusr(usr)
+
+    txtdb =   usr + ".txt"
+
+    ntxtdb =  usr + "NWT.txt"
+
+    lasttw = open(txtdb, "r")
     put = lasttw.read()
     lasttw.close()
 
@@ -12,7 +28,8 @@ def taketts():
 
     api = tweepy.API(auth)
 
-    new_tweets = api.user_timeline(since_id=put)
+
+    new_tweets = api.user_timeline(since_id=put, user_id=idusr)
 
     nw_tweets = len(new_tweets)
 
@@ -24,12 +41,16 @@ def taketts():
         ult = put
 
     if put is not ult:
-      lasttw2 = open("lasttw.txt", "w")
+      lasttw2 = open(txtdb, "w")
       lasttw2.write(ult)
       lasttw2.close()
 
-    newt = open("newt.txt", "w")
+    newt = open(ntxtdb, "w")
     newt.write(strnt)
-    newt.close();
+    newt.close()
 
-    return strnt
+    pictt = {
+        "ntw": strnt
+    }
+
+    return pictt
