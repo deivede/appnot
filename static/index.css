@@ -1,0 +1,56 @@
+#render {
+    height: 620px;
+    width: 620px;
+    background-color: yellow;
+    margin: 0 auto;
+}
+
+.box {
+height: 150px;
+width: 150px;
+display: block;
+margin: 0 auto;
+background-color: lightyellow;
+display: inline-block;
+}
+
+
+
+.dot2 {
+height: 35px;
+width: 35px;
+background-color: lightgrey;
+border-radius: 50%;
+display: inline-block;
+}
+
+.dot3 {
+height: 35px;
+width: 35px;
+background-color: red;
+border-radius: 50%;
+display: inline-block;
+position: relative;
+bottom: 100px;
+left: 60px;
+border: 1px solid white;
+}
+
+.not{
+text-align: center;
+color: white;
+position: relative;
+top: 5px;
+font-weight: bold;
+font-size: 1.2em;
+font-family: sans-serif;
+}
+
+.clip {
+clip-path: circle(50%);
+height: 100px;
+weigth: 100px;
+position: relative;
+top: 20px;
+left: 25px;
+}

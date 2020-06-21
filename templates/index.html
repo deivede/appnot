@@ -3,22 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="./static/update.js">
-    </script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="./static/modulo.js"></script>
     <link rel="stylesheet" href="./static/index.css">
 </head>
-<body>
-   <div class="box">
-     <div><img id="ppic" class="clip" src="https://pbs.twimg.com/profile_images/909549046020308992/iUwzkyXZ_400x400.jpg"></div>
-     <button class="dot2" onclick="update_ntws(deivede73)"></button>
-     <div class="dot3"><div class="not" id="deivede73">{{ntw}}</div></div>
-  </div>
 
-<div class="box">
-     <div><img id="ppic" class="clip" src="https://pbs.twimg.com/profile_images/617404992274698240/s1QyJMCT_400x400.jpg"></div>
-     <button class="dot2" onclick="update_ntws(playactionfa)"></button>
-     <div class="dot3"><div class="not" id="playactionfa">{{ntw}}</div></div>
-  </div>
+<div id="render"></div>
 
 </body>
 </html>

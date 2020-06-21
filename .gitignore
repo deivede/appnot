@@ -1,0 +1,17 @@
+
+.DS_Store
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/netAPI.iml
+.idea/vcs.xml
+__pycache__/twitterapi.cpython-38.pyc
+__pycache__/twkeys.cpython-38.pyc
+../txt_db/lasttw.txt
+../txt_db/newt.txt
+templates/.DS_Store
+templates/update.js
+twkeys.py
+../txt_db/lasttw.txt
+../txt_db/newt.txt
+__pycache__/twitterapi.cpython-38.pyc
