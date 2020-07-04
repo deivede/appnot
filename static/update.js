@@ -40,3 +40,4 @@ var visornot = setid(usr);
 
         rendertt();
     }
+
